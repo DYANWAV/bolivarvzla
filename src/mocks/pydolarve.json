@@ -1,0 +1,107 @@
+{
+  "datetime": {
+    "date": "jueves, 21 de noviembre de 2024",
+    "time": "12:17:18 p. m."
+  },
+  "monitors": {
+    "amazon_gift_card": {
+      "change": 0.74,
+      "color": "green",
+      "image": "https://res.cloudinary.com/dcpyfqx87/image/upload/v1729921480/monitors/public_id:amazon.webp",
+      "last_update": "20/11/2024, 08:29 AM",
+      "percent": 1.53,
+      "price": 48.33,
+      "price_old": 47.59,
+      "symbol": "▲",
+      "title": "Amazon Gift Card"
+    },
+    "bcv": {
+      "change": 0.22,
+      "color": "green",
+      "image": "https://res.cloudinary.com/dcpyfqx87/image/upload/v1729921478/monitors/public_id:bcv.webp",
+      "last_update": "21/11/2024, 09:13 AM",
+      "percent": 0.48,
+      "price": 46.06,
+      "price_old": 45.84,
+      "symbol": "▲",
+      "title": "BCV"
+    },
+    "binance": {
+      "change": 0.14,
+      "color": "green",
+      "image": "https://res.cloudinary.com/dcpyfqx87/image/upload/v1729921484/monitors/public_id:binance.webp",
+      "last_update": "21/11/2024, 12:13 PM",
+      "percent": 0.25,
+      "price": 56.83,
+      "price_old": 56.69,
+      "symbol": "▲",
+      "title": "Binance"
+    },
+    "cripto_dolar": {
+      "change": 0.21,
+      "color": "red",
+      "image": "https://res.cloudinary.com/dcpyfqx87/image/upload/v1729921484/monitors/public_id:cripto_dolar.webp",
+      "last_update": "21/11/2024, 11:13 AM",
+      "percent": 0.37,
+      "price": 56.38,
+      "price_old": 56.59,
+      "symbol": "▼",
+      "title": "Cripto Dólar"
+    },
+    "dolar_today": {
+      "change": 0,
+      "color": "neutral",
+      "image": "https://res.cloudinary.com/dcpyfqx87/image/upload/v1716093833/criptodolar/qqmrcjkh49tjjcfoteip.png",
+      "last_update": "22/10/2024, 10:15 AM",
+      "percent": 0,
+      "price": 46.9,
+      "price_old": 46.9,
+      "symbol": "",
+      "title": "Dólar Today"
+    },
+    "enparalelovzla": {
+      "change": 0.86,
+      "color": "green",
+      "image": "https://res.cloudinary.com/dcpyfqx87/image/upload/v1729921479/monitors/public_id:epv.webp",
+      "last_update": "20/11/2024, 08:29 AM",
+      "percent": 1.53,
+      "price": 56.06,
+      "price_old": 55.2,
+      "symbol": "▲",
+      "title": "EnParaleloVzla"
+    },
+    "paypal": {
+      "change": 0.76,
+      "color": "green",
+      "image": "https://res.cloudinary.com/dcpyfqx87/image/upload/v1729921486/monitors/public_id:paypal.webp",
+      "last_update": "20/11/2024, 08:29 AM",
+      "percent": 1.55,
+      "price": 49.18,
+      "price_old": 48.42,
+      "symbol": "▲",
+      "title": "Paypal"
+    },
+    "skrill": {
+      "change": 0.77,
+      "color": "green",
+      "image": "https://res.cloudinary.com/dcpyfqx87/image/upload/v1729921487/monitors/public_id:skrill.webp",
+      "last_update": "20/11/2024, 08:29 AM",
+      "percent": 1.52,
+      "price": 50.5,
+      "price_old": 49.73,
+      "symbol": "▲",
+      "title": "Skrill"
+    },
+    "uphold": {
+      "change": 0.8,
+      "color": "green",
+      "image": "https://res.cloudinary.com/dcpyfqx87/image/upload/v1729921488/monitors/public_id:uphold.webp",
+      "last_update": "20/11/2024, 08:29 AM",
+      "percent": 1.54,
+      "price": 51.91,
+      "price_old": 51.11,
+      "symbol": "▲",
+      "title": "Uphold"
+    }
+  }
+}

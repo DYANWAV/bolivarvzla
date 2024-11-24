@@ -1,0 +1,22 @@
+import { CURRENCIES } from '@/consts'
+import { useSelectCurrency } from '@/hooks/useSelectCurrency'
+
+export const SelectCurrency = () => {
+  const { currency, handleChangeCurrency } = useSelectCurrency()
+
+  return (
+    <select
+      className="bg-green-950 text-green-500 font-semibold uppercase px-4 py-2 rounded-full"
+      value={currency}
+      onChange={handleChangeCurrency}
+    >
+      {Object.entries(CURRENCIES).map(([key, { code }]) => {
+        return (
+          <option className="font-semibold" value={key} key={key}>
+            {code}
+          </option>
+        )
+      })}
+    </select>
+  )
+}

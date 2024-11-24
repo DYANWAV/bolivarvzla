@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --green-950: #052e16;
+  --green-500: #22c55e;
+  font-family: 'JetBrains Mono', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #111111;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  position: absolute;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+label {
+  transition: all 0.15s;
+}
+
+input {
+  width: 100%;
+
+  &[type='number'] {
+    padding: 0.5rem;
+    text-align: right;
+    background-color: transparent;
+    border-bottom: 1px solid transparent;
+    transition: all 0.15s;
+
+    &:focus,
+    &:focus-visible {
+      outline: none;
+    }
+
+    &::-webkit-inner-spin-button {
+      display: none;
+    }
+  }
+}
+
+button {
+  &:has(>.tooltip) {
+    color: rgba(255, 255, 255, 0.7);
+    position: relative;
+    margin: 0 auto;
+
+    @media (hover: hover) {
+      &:hover {
+        color: white;
+
+        & .tooltip {
+          visibility: visible;
+          opacity: 1;
+          bottom: calc(100% + var(--height));
+          translate: -50%;
+          position: absolute;
+          scale: 1;
+        }
+      }
+    }
+
+    & .tooltip {
+      --height: 8px;
+      transition: all .15s;
+      scale: 0;
+      visibility: hidden;
+      opacity: 0;
+      bottom: 0;
+      left: 50%;
+      translate: -50%;
+      position: absolute;
+      font-size: 14px;
+      border-radius: 6px;
+      padding-block: 0;
+      padding-inline: 8px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        translate: -50%;
+        border: var(--height) solid;
+        border-color: var(--green-950) transparent transparent transparent;
+      }
+    }
+  }
+}
