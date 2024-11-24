@@ -1,8 +1,5 @@
-import { Currency, Monitor, Monitorkey, MonitorsRecord } from '@/types/types'
+import { Currency, Monitor, Monitorkey } from '@/types/types'
 import { getPyDolarURL } from '@/utils'
-import JSON from '@/mocks/pydolarve.json'
-
-const monitors = JSON.monitors as MonitorsRecord
 
 export const getMonitorsData = async (
   currency: Currency,
