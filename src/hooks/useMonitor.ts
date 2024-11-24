@@ -9,7 +9,9 @@ export const useMonitor = () => {
   const [monitor, setMonitors] = useState<Monitor>({} as Monitor)
 
   useEffect(() => {
-    getMonitorsData(currency, currentMonitor).then(setMonitors)
+    getMonitorsData(currency, currentMonitor).then(monitor => {
+      if (monitor) setMonitors(monitor)
+    })
   }, [currency, currentMonitor])
 
   return {
