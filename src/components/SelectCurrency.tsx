@@ -6,6 +6,7 @@ export const SelectCurrency = () => {
 
   return (
     <select
+      aria-label="Select monitor"
       className="bg-green-950 text-green-500 font-semibold uppercase px-4 py-2 rounded-full"
       value={currency}
       onChange={handleChangeCurrency}

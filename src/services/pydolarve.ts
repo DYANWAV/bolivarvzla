@@ -22,3 +22,21 @@ export const getMonitorsData = async (
     }
   }
 }
+
+interface Props {
+  currency: Currency
+  monitor: Monitorkey
+}
+
+export const fetchMonitorData = async ({ currency, monitor }: Props) => {
+  if (!currency) throw new Error('invalid currency')
+  if (!monitor) throw new Error('invalid monitor')
+
+  try {
+    const res = await fetch(getPyDolarURL(currency, monitor))
+    if (!res.ok) throw new Error('Error fetching monitor data')
+    return (await res.json()) as Monitor
+  } catch (error) {
+    if (error instanceof Error) throw new Error(error.message)
+  }
+}

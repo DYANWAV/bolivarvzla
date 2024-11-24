@@ -15,12 +15,13 @@ export const SelectMonitor = () => {
 
   return (
     <select
+      aria-label="Select monitor"
       className="bg-green-950 text-green-500 font-semibold uppercase px-2 py-2 rounded-md"
       value={currentMonitor}
       onChange={handleChangeMonitor}
     >
       {Object.entries(getMonitorsTitles(currency)).map(([key, value]) => (
-        <option className='font-semibold bg-green-900/20' value={key} key={key}>
+        <option className="font-semibold bg-green-900/20" value={key} key={key}>
           {value}
         </option>
       ))}
