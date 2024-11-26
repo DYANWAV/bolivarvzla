@@ -8,7 +8,7 @@ export const SelectMonitor = () => {
   return (
     <select
       aria-label="Select monitor"
-      className="bg-green-950 text-green-500 font-semibold uppercase px-2 py-2 rounded-md"
+      className="bg-green-950 text-green-500 font-semibold uppercase p-2 rounded-md"
       value={monitorSelected}
       onChange={handleChangeMonitor}
     >
