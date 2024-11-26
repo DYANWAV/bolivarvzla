@@ -8,7 +8,7 @@ export const LastUpdate = () => {
 
   return (
     <>
-      <section className="text-green-500 font-semibold text-sm p-8 flex flex-col gap-2">
+      <section className="text-green-500 font-semibold text-sm sm:p-8 flex flex-col gap-2">
         <p className="text-neutral-400">Última actualización</p>
         <p>{monitors?.[monitorSelected as Monitorkey]?.last_update ?? '...'}</p>
       </section>
