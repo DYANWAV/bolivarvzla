@@ -1,34 +1,33 @@
-import { ChangeEvent, useEffect, useState } from 'react'
-import { useMonitor } from './useMonitor'
+import { ChangeEvent, useEffect } from 'react'
+import { useInputs } from './useInputs'
+import { useMonitors } from './useMonitor'
 
 export const useCalculatorInputs = () => {
-  const { monitor, currency, currentMonitor } = useMonitor()
-  const [VESValue, setVESValue] = useState<string | number>('0.00')
-  const [currencyValue, setCurrencyalue] = useState<string | number>('1.00')
+  const { monitor } = useMonitors()
+  const { bolivares, currency, setBolivares, setCurrency } = useInputs()
 
-  const handleChangeVESValue = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleChangeBolivares = (e: ChangeEvent<HTMLInputElement>) => {
     const { value } = e.target
-    setVESValue(value)
+    setBolivares(value)
     const result = Number(value) / monitor.price
-    setCurrencyalue(result.toFixed(2))
+    setCurrency(result.toFixed(2))
   }
 
-  const handleChangeCurrencyValue = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleChangeCurrency = (e: ChangeEvent<HTMLInputElement>) => {
     const { value } = e.target
-    setCurrencyalue(value)
+    setCurrency(value)
     const result = Number(value) * monitor.price
-    setVESValue(result.toFixed(2))
+    setBolivares(result.toFixed(2))
   }
 
   useEffect(() => {
-    setVESValue(monitor.price)
-    setCurrencyalue('1.00')
-  }, [currency, currentMonitor, monitor])
+    setBolivares(monitor.price?.toFixed(2))
+  }, [monitor, setBolivares, setCurrency])
 
   return {
-    VESValue,
-    currencyValue,
-    handleChangeVESValue,
-    handleChangeCurrencyValue,
+    bolivares,
+    currency,
+    handleChangeBolivares,
+    handleChangeCurrency,
   }
 }

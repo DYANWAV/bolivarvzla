@@ -1,13 +1,8 @@
-import { Currency, Monitorkey } from '@/types/types'
+import { Currency } from '@/types/types'
 import { CURRENCIES, MONITORSTITLES } from './consts'
 
-export const getPyDolarURL = (currency: Currency, monitor: Monitorkey) =>
-  `https://pydolarve.org/api/v1/${currency}?page=criptodolar&monitor=${monitor}`
-// `https://pydolarve.org/api/v1/${currency}?page=criptodolar&monitor=${monitor}`
-
-// export const mapMonitors = (data: PyDolarVeResponse): MappedMonitors[] => {
-//   return Object.entries(data.monitors).map(([key, monitor]) => )
-// }
+export const getPyDolarURL = (currency: Currency) =>
+  `https://pydolarve.org/api/v1/${currency}?page=criptodolar`
 
 export const getMonitorsTitles = (currency: Currency) => {
   if (currency === CURRENCIES.dollar.name) {

@@ -1,24 +1,29 @@
-import { useMonitor } from '@/hooks/useMonitor'
-import { ArrowDown, ArrowUp } from '../Icons'
+import { useMonitors } from '@/hooks/useMonitor'
+import { ArrowDown, ArrowUp } from '@/components/Icons'
+import { BOLIVARES_INITIAL_VALUE as ZERO_PERCENT, COLOR } from '@/consts'
 
 export const CalculatorPercent = () => {
-  const { monitor } = useMonitor()
+  const { monitor } = useMonitors()
 
   const color = `text-${monitor.color}-500`
 
-  const isUp = monitor.color === 'green'
+  console.log(monitor.color)
+
+  const isUp = monitor.color === COLOR.green
+
+  console.log(isUp)
 
   return (
     <>
-      <section className={`font-semibold flex m-auto ${color}`}>
-        {monitor.color && isUp ? (
+      <section className={`${color} font-semibold flex m-auto`}>
+        {monitor && isUp ? (
           <ArrowUp />
-        ) : monitor.color === 'neutral' ? (
+        ) : monitor === COLOR.neutral ? (
           ''
         ) : (
           <ArrowDown />
         )}
-        <p>{monitor.percent ?? '0.00'}%</p>
+        <p>{monitor.percent ?? ZERO_PERCENT}%</p>
       </section>
     </>
   )

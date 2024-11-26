@@ -3,23 +3,19 @@ import { BolivarInput, CopyButton, CurrencyInput } from '@components'
 import { InputNumber } from '../InputNumber'
 
 export const CalculatorInputs = () => {
-  const {
-    VESValue,
-    currencyValue,
-    handleChangeCurrencyValue,
-    handleChangeVESValue,
-  } = useCalculatorInputs()
+  const { bolivares, currency, handleChangeCurrency, handleChangeBolivares } =
+    useCalculatorInputs()
 
   return (
     <section className="flex flex-col gap-4 text-xl sm:text-2xl font-semibold [&>label]:grid [&>label]:grid-cols-[36px_1fr_36px] [&>label]:items-center [&>label]:content-center">
       <CurrencyInput>
-        <InputNumber value={currencyValue} onChange={handleChangeCurrencyValue} />
-        <CopyButton value={currencyValue} />
+        <InputNumber value={currency} onChange={handleChangeCurrency} />
+        <CopyButton value={currency} />
       </CurrencyInput>
 
       <BolivarInput>
-        <InputNumber value={VESValue} onChange={handleChangeVESValue} />
-        <CopyButton value={VESValue} />
+        <InputNumber value={bolivares} onChange={handleChangeBolivares} />
+        <CopyButton value={bolivares} />
       </BolivarInput>
     </section>
   )

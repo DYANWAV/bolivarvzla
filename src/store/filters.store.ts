@@ -1,17 +1,20 @@
+import { CURRENCIES, MONITORSKEYS } from '@/consts'
 import { FiltersActions, FiltersState } from '@/types/filters.types'
-import { CURRENCIES, MONITORSKEYS } from '../consts'
 import { Currency, Monitorkey } from '@/types/types'
 import { create } from 'zustand'
 
-export const useFilters = create<FiltersState & FiltersActions>(set => ({
-  currency: CURRENCIES.dollar.name,
-  currentMonitor: MONITORSKEYS.enparalelovzla,
-  changeCurrency: (currency: Currency) =>
-    set({ currency, currentMonitor: MONITORSKEYS.enparalelovzla }),
-  changeMonitor: (monitor: Monitorkey) => set({ currentMonitor: monitor }),
-  reset: () =>
+export const useFiltersStore = create<FiltersState & FiltersActions>(set => ({
+  currencySelected: CURRENCIES.dollar.name,
+  monitorSelected: MONITORSKEYS.enparalelovzla,
+
+  setCurrencySelected: (currencySelected: Currency) =>
+    set({ currencySelected, monitorSelected: MONITORSKEYS.enparalelovzla }),
+
+  setMonitorSelected: (monitor: Monitorkey) => set({ monitorSelected: monitor }),
+
+  resetFilters: () =>
     set({
-      currency: CURRENCIES.dollar.name,
-      currentMonitor: MONITORSKEYS.enparalelovzla,
+      currencySelected: CURRENCIES.dollar.name,
+      monitorSelected: MONITORSKEYS.enparalelovzla,
     }),
 }))

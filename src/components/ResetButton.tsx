@@ -1,13 +1,21 @@
-import { useFilters } from '@/store/filters.store'
+import { useFilters } from '@/hooks/useFilters'
+import { useInputs } from '@/hooks/useInputs'
 import { ResetIcon } from '@components'
 
 export const ResetButton = () => {
-  const reset = useFilters(state => state.reset)
+  const { resetFilters } = useFilters()
+  const { resetInputs } = useInputs()
+
+  const handleReset = () => {
+    resetFilters()
+    resetInputs()
+  }
+
   return (
     <button
       aria-label="Copy input value"
       className="p-0 border-none size-8 bg-transparent"
-      onClick={reset}
+      onClick={handleReset}
     >
       <ResetIcon className="size-8" />
     </button>

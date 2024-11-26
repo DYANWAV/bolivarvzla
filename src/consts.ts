@@ -38,3 +38,12 @@ export const MONITORSTITLES = {
   cripto_euro: 'Cripto Euro',
   euro_today: 'Euro Today',
 } as const
+
+export const BOLIVARES_INITIAL_VALUE = '0.00'
+export const CURRENCY_INITIAL_VALUE = '1.00'
+
+export const COLOR = {
+  green: 'green',
+  red: 'red',
+  neutral: 'neutral',
+} as const

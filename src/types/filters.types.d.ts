@@ -1,10 +1,12 @@
+import { Monitorkey } from './types'
+
 export type FiltersState = {
-  currency: Currency
-  currentMonitor: Monitorkey
+  currencySelected: Currency
+  monitorSelected: Monitorkey
 }
 
 export type FiltersActions = {
-  changeCurrency: (currency: Currency) => void
-  changeMonitor: (monitor: Monitorkey) => void
-  reset: () => void
+  setCurrencySelected: (currency: Currency) => void
+  setMonitorSelected: (monitor: Monitorkey) => void
+  resetFilters: () => void
 }

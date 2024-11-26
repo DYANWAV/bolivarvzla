@@ -2,13 +2,13 @@ import { CURRENCIES } from '@/consts'
 import { useSelectCurrency } from '@/hooks/useSelectCurrency'
 
 export const SelectCurrency = () => {
-  const { currency, handleChangeCurrency } = useSelectCurrency()
+  const { currencySelected, handleChangeCurrency } = useSelectCurrency()
 
   return (
     <select
       aria-label="Select monitor"
       className="bg-green-950 text-green-500 font-semibold uppercase px-4 py-2 rounded-full"
-      value={currency}
+      value={currencySelected}
       onChange={handleChangeCurrency}
     >
       {Object.entries(CURRENCIES).map(([key, { code }]) => {

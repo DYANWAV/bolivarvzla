@@ -1,18 +1,17 @@
-import { useFilters } from '@/store/filters.store'
 import { Currency } from '@/types/types'
 import { ChangeEvent } from 'react'
+import { useFilters } from './useFilters'
 
 export const useSelectCurrency = () => {
-  const currency = useFilters(state => state.currency)
-  const changeCurrency = useFilters(state => state.changeCurrency)
+  const { currencySelected, setCurrencySelected } = useFilters()
 
   const handleChangeCurrency = (e: ChangeEvent<HTMLSelectElement>) => {
     const { value } = e.target
-    changeCurrency(value as Currency)
+    setCurrencySelected(value as Currency)
   }
 
   return {
-    currency,
+    currencySelected,
     handleChangeCurrency,
   }
 }

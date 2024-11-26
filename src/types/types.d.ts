@@ -1,4 +1,4 @@
-import { CURRENCIES, MONITORSKEYS } from '@/consts'
+import { COLOR, CURRENCIES, MONITORSKEYS } from '@/consts'
 
 export interface PyDolarVeResponse {
   datetime: Datetime
@@ -6,10 +6,11 @@ export interface PyDolarVeResponse {
 }
 
 export type MonitorsRecord = Record<Monitorkey, Monitor>
+export type Color = keyof typeof COLOR
 
-export interface Monitor {
+export type Monitor = {
   change: number
-  color: string
+  color: Color
   image: string
   last_update: string
   percent: number
