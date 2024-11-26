@@ -46,11 +46,6 @@ button {
   transition: all 0.15s;
 }
 
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
 label {
   transition: all 0.15s;
 }
@@ -94,6 +89,19 @@ button {
           position: absolute;
           scale: 1;
         }
+      }
+    }
+
+    &:focus {
+      color: white;
+
+      & .tooltip {
+        visibility: visible;
+        opacity: 1;
+        bottom: calc(100% + var(--height));
+        translate: -50%;
+        position: absolute;
+        scale: 1;
       }
     }
 
