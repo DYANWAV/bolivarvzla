@@ -92,7 +92,7 @@ button {
       }
     }
 
-    &:focus {
+    &:focus-visible {
       color: white;
 
       & .tooltip {
