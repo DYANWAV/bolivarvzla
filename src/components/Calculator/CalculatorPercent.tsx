@@ -7,11 +7,7 @@ export const CalculatorPercent = () => {
 
   const color = `text-${monitor.color}-500`
 
-  console.log(monitor.color)
-
   const isUp = monitor.color === COLOR.green
-
-  console.log(isUp)
 
   return (
     <>
