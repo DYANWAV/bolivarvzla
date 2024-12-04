@@ -10,7 +10,9 @@ export const LastUpdate = () => {
     <>
       <section className="text-green-500 font-semibold text-sm py-4 sm:py-8 flex flex-col gap-2">
         <p className="text-neutral-400">Última actualización</p>
-        <p>{monitors?.[monitorSelected as Monitorkey]?.last_update ?? '...'}</p>
+        <time dateTime={monitors?.[monitorSelected as Monitorkey]?.last_update}>
+          {monitors?.[monitorSelected as Monitorkey]?.last_update ?? '...'}
+        </time>
       </section>
     </>
   )
