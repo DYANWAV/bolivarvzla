@@ -1,5 +1,9 @@
 # [BolivarVzla](https://bolivarvzla.netlify.app/)
 
+<p align="center">
+  <img src="public/bolivarvzla.png" alt="BolivarVzla Mockup">
+</p>
+
 Este proyecto es una página web que permite consultar el precio del dólar y el euro en bolívares y viceversa, utilizando la API de Pydolarvzla. Está basado en la página https://alcambio.app/ y desarrollado con HTML, CSS, React y TypeScript.
 
 La página web está alojada en Netlify. Puedes acceder a la aplicación en el siguiente enlace: [BolivarVzla](https://bolivarvzla.netlify.app/)
