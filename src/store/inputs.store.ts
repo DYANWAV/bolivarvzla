@@ -9,7 +9,10 @@ export const useInputsStore = create<InputsState & InputsActions>(set => ({
   setBolivares: (value: string) => set({ bolivares: value }),
   setCurrency: (value: string) => set({ currency: value }),
 
-  resetInputs: () => {
-    set({ currency: CURRENCY_INITIAL_VALUE })
+  resetInputs: (bolivarValue: string) => {
+    set({
+      currency: CURRENCY_INITIAL_VALUE,
+      bolivares: bolivarValue,
+    })
   },
 }))

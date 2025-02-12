@@ -6,5 +6,5 @@ export type InputsState = {
 export type InputsActions = {
   setBolivares: (value: string) => void
   setCurrency: (value: string) => void
-  resetInputs: () => void
+  resetInputs: (bolivarValue: string) => void
 }
